@@ -51,9 +51,9 @@ class Admin extends Application {
         $record = $this->quotes->create();
         // extract submitted fields
         $record->id = $this->input->post('id');
-        $record->id = $this->input->post('who');
-        $record->id = $this->input->post('mug');
-        $record->id = $this->input->post('what');
+        $record->who = $this->input->post('who');
+        $record->mug = $this->input->post('mug');
+        $record->what = $this->input->post('what');
         // save stuff
         if(empty($record->id)) $this->quotes->add($record);
         else $this->quotes->update($record);
